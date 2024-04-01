@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO2 Emissions by Indian States and Union Territories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://res.cloudinary.com/people-matters/image/upload/fl_immutable_cache,w_624,h_351,q_auto,f_auto/v1701190002/1701189999.jpg'); /* Replace 'background_image.jpg' with your image file */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-bottom: 50px; /* Added padding to the bottom */
+            position: relative; /* Added relative positioning */
+            background-color: rgba(255, 255, 255, 0.7); /* Background color with opacity */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow */
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+            position: relative;
+            cursor: pointer;
+        }
+        li:hover {
+            background-color: #f2f2f2;
+        }
+        .state-info {
+            display: none;
+            background-color: rgba(51, 51, 51, 0.9);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1;
+            position: absolute;
+            top: calc(100% + 5px); /* Adjusted positioning */
+            left: 0;
+            transform: translateY(0);
+            white-space: nowrap;
+        }
+        li:hover .state-info {
+            display: block;
+        }
+        @media screen and (max-width: 600px) {
+            li {
+                padding: 8px;
+            }
+            .state-info {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CO2 Emissions by Indian States and Union Territories</h1>
+    </header>
+    <main>
+        <ul>
+            <li class="state">Andaman and Nicobar Islands
+                <div class="state-info">CO2 emissions: 0.35 million metric tons</div>
+            </li>
+            <li class="state">Andhra Pradesh
+                <div class="state-info">CO2 emissions: 118.62 million metric tons</div>
+            </li>
+            <li class="state">Arunachal Pradesh
+                <div class="state-info">CO2 emissions: 0.66 million metric tons</div>
+            </li>
+            <li class="state">Assam
+                <div class="state-info">CO2 emissions: 22.39 million metric tons</div>
+            </li>
+            <li class="state">Bihar
+                <div class="state-info">CO2 emissions: 24.49 million metric tons</div>
+            </li>
+            <li class="state">Chandigarh
+                <div class="state-info">CO2 emissions: 2.06 million metric tons</div>
+            </li>
+            <li class="state">Chhattisgarh
+                <div class="state-info">CO2 emissions: 41.97 million metric tons</div>
+            </li>
+            <li class="state">Dadra and Nagar Haveli and Daman and Diu
+                <div class="state-info">CO2 emissions: 0.18 million metric tons</div>
+            </li>
+            <li class="state">Delhi
+                <div class="state-info">CO2 emissions: 61.81 million metric tons</div>
+            </li>
+            <li class="state">Goa
+                <div class="state-info">CO2 emissions: 3.09 million metric tons</div>
+            </li>
+            <li class="state">Gujarat
+                <div class="state-info">CO2 emissions: 121.79 million metric tons</div>
+            </li>
+            <li class="state">Haryana
+                <div class="state-info">CO2 emissions: 51.55 million metric tons</div>
+            </li>
+            <li class="state">Himachal Pradesh
+                <div class="state-info">CO2 emissions: 2.06 million metric tons</div>
+            </li>
+            <li class="state">Jammu and Kashmir
+                <div class="state-info">CO2 emissions: 3.52 million metric tons</div>
+            </li>
+            <li class="state">Jharkhand
+                <div class="state-info">CO2 emissions: 52.72 million metric tons</div>
+            </li>
+            <li class="state">Karnataka
+                <div class="state-info">CO2 emissions: 68.68 million metric tons</div>
+            </li>
+            <li class="state">Kerala
+                <div class="state-info">CO2 emissions: 34.34 million metric tons</div>
+            </li>
+            <li class="state">Ladakh
+                <div class="state-info">CO2 emissions: 0.07 million metric tons</div>
+            </li>
+            <li class="state">Lakshadweep
+                <div class="state-info">CO2 emissions: 0.01 million metric tons</div>
+            </li>
+            <li class="state">Madhya Pradesh
+                <div class="state-info">CO2 emissions: 62.48 million metric tons</div>
+            </li>
+            <li class="state">Maharashtra
+                <div class="state-info">CO2 emissions: 160.45 million metric tons</div>
+            </li>
+            <li class="state">Manipur
+                <div class="state-info">CO2 emissions: 0.59 million metric tons</div>
+            </li>
+            <li class="state">Meghalaya
+                <div class="state-info">CO2 emissions: 0.34 million metric tons</div>
+            </li>
+            <li class="state">Mizoram
+                <div class="state-info">CO2 emissions: 0.15 million metric tons</div>
+            </li>
+            <li class="state">Nagaland
+                <div class="state-info">CO2 emissions: 0.22 million metric tons</div>
+            </li>
+            <li class="state">Odisha
+                <div class="state-info">CO2 emissions: 31.23 million metric tons</div>
+            </li>
+            <li class="state">Puducherry
+                <div class="state-info">CO2 emissions: 0.24 million metric tons</div>
+            </li>
+            <li class="state">Punjab
+                <div class="state-info">CO2 emissions: 34.96 million metric tons</div>
+            </li>
+            <li class="state">Rajasthan
+                <div class="state-info">CO2 emissions: 70.89 million metric tons</div>
+            </li>
+            <li class="state">Sikkim
+                <div class="state-info">CO2 emissions: 0.09 million metric tons</div>
+            </li>
+            <li class="state">Tamil Nadu
+                <div class="state-info">CO2 emissions: 115.56 million metric tons</div>
+            </li>
+            <li class="state">Telangana
+                <div class="state-info">CO2 emissions: 46.03 million metric tons</div>
+            </li>
+            <li class="state">Tripura
+                <div class="state-info">CO2 emissions: 0.26 million metric tons</div>
+            </li>
+            <li class="state">Uttar Pradesh
+                <div class="state-info">CO2 emissions: 116.79 million metric tons</div>
+            </li>
+            <li class="state">Uttarakhand
+                <div class="state-info">CO2 emissions: 6.04 million metric tons</div>
+            </li>
+            <li class="state">West Bengal
+                <div class="state-info">CO2 emissions: 83.55 million metric tons</div>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>

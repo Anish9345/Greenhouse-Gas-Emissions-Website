@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenhouse Gas Emissions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('data:image/jpeg;base64,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'); /* Replace 'path_to_your_image.jpg' with the actual path to your image */
+            background-size: cover;
+            background-position: center;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ddd;
+        }
+        main {
+            padding: 20px;
+            text-align: justify;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .info-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .state-info {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+        .state:hover .state-info {
+            display: block;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .image-gallery img {
+            width: 300px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Greenhouse Gas Emissions</h1>
+    </header>
+    <nav>
+        <a href="#what">What are Greenhouse Gases?</a>
+        <a href="#effects">Effects of Emissions</a>
+        <a href="#sources">Sources of Emissions</a>
+        <a href="#mitigation">Mitigation Strategies</a>
+        <a href="states_emissions.html">Emissions by Indian States and Union Territories</a>
+        <a href="mcq_page.html">MCQ Page</a>
+        <a href="blog.html">Blogs</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <main>
+        <section id="what">
+            <h2>What are Greenhouse Gases?</h2>
+            <div class="info-box">
+                <p>Greenhouse gases are gases in the Earth's atmosphere that trap heat. This phenomenon, known as the greenhouse effect, is essential for maintaining Earth's temperature, but human activities have intensified it, leading to global warming.</p>
+                <p>The primary greenhouse gases include:</p>
+                <ul>
+                    <li><span class="tooltip" title="CO2 emissions are the highest among all greenhouse gases and primarily come from burning fossil fuels for energy.">CO<sub>2</sub></span></li>
+                    <li><span class="tooltip" title="Methane emissions primarily come from agriculture (livestock digestion) and landfills.">CH<sub>4</sub></span></li>
+                    <li><span class="tooltip" title="Nitrous oxide emissions come from agricultural activities, burning fossil fuels, and industrial processes.">N<sub>2</sub>O</span></li>
+                    <li><span class="tooltip" title="Fluorinated gases are synthetic gases used in a variety of industrial applications.">Fluorinated gases</span> (such as hydrofluorocarbons, perfluorocarbons, sulfur hexafluoride)</li>
+                </ul>
+            </div>
+        </section>
+        <section id="effects">
+            <h2>Effects of Greenhouse Gas Emissions</h2>
+            <div class="info-box">
+                <p>Greenhouse gas emissions have far-reaching consequences:</p>
+                <ul>
+                    <li><strong>Rising temperatures:</strong> Global temperatures are increasing, leading to heatwaves and more frequent extreme weather events.</li>
+                    <li><strong>Melting ice caps and glaciers:</strong> This contributes to sea level rise, threatening coastal communities and habitats.</li>
+                    <li><strong>Disruption of ecosystems:</strong> Climate change affects biodiversity, leading to shifts in habitats and endangering species.</li>
+                    <li><strong>Impact on agriculture:</strong> Changes in temperature and precipitation patterns affect crop yields and food security.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="sources">
+            <h2>Sources of Greenhouse Gas Emissions</h2>
+            <div class="info-box">
+                <p>Human activities are the primary drivers of greenhouse gas emissions:</p>
+                <ul>
+                    <li><strong>Energy production:</strong> Burning fossil fuels (coal, oil, and natural gas) for electricity and heat is the largest source of emissions.</li>
+                    <li><strong>Transportation:</strong> Cars, trucks, planes, ships, and trains emit CO<sub>2</sub> and other pollutants.</li>
+                    <li><strong>Industry:</strong> Manufacturing processes, particularly those involving heavy machinery and chemical reactions, release gases like CO<sub>2</sub>, CH<sub>4</sub>, and N<sub>2</sub>O.</li>
+                    <li><strong>Agriculture:</strong> Livestock (particularly cows and sheep) produce methane through digestion, and rice paddies emit methane from anaerobic decomposition.</li>
+                    <li><strong>Deforestation:</strong> Clearing land for agriculture, logging, and urban development reduces the number of trees that can absorb CO<sub>2</sub>.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="mitigation">
+            <h2>Mitigation Strategies</h2>
+            <div class="info-box">
+                <p>Addressing greenhouse gas emissions requires concerted efforts:</p>
+                <ul>
+                    <li><strong>Transition to renewable energy:</strong> Invest in solar, wind, hydroelectric, and other renewable sources to reduce reliance on fossil fuels.</li>
+                    <li><strong>Energy efficiency:</strong> Improve the efficiency of buildings, appliances, and industrial processes to reduce energy consumption.</li>
+                    <li><strong>Sustainable transportation:</strong> Promote public transportation, electric vehicles, biking, and walking to reduce emissions from cars and trucks.</li>
+                    <li><strong>Agricultural practices:</strong> Implement practices such as precision farming, crop rotation, and methane capture to reduce emissions from agriculture.</li>
+                    <li><strong>Reforestation and afforestation:</strong> Planting trees and restoring ecosystems can absorb CO<sub>2</sub> from the atmosphere.</li>
+                    <li><strong>Policy measures:</strong> Enact regulations, carbon pricing, and incentives to encourage emission reductions across sectors.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Image Gallery Section -->
+        <section>
+            <h2>Image Gallery</h2>
+            <div class="image-gallery">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Greenhouse-effect-t2.svg" alt="Greenhouse Gas Emissions 1">
+                <img src="https://www.trvst.world/wp-content/uploads/2022/08/introduction-greenhouse-gases.jpg" alt="Greenhouse Gas Emissions 2">
+                <img src="https://t3.ftcdn.net/jpg/04/51/04/32/360_F_451043275_vgeFZeGFZvZZVgXZghBke95p42CZhSqF.jpg" alt="Greenhouse Gas Emissions 3">
+                <img src="https://i0.wp.com/www.bibimohanan.com/wp-content/uploads/2021/05/Greenhouse-effect-global-warming.jpg?resize=825%2C485" alt="Greenhouse Gas Emissions 4">
+                <img src="https://t3.ftcdn.net/jpg/03/84/88/34/360_F_384883425_ZI0ehcrKZm3Snaig2zUVnJKoB2Lm49yU.jpg" alt="Greenhouse Gas Emissions 5">
+                <img src="https://qph.cf2.quoracdn.net/main-qimg-b7c51d00ef75557d0e14bc00335f7a16-lq" alt="Greenhouse Gas Emissions 6">
+                <img src="https://media.istockphoto.com/id/1382353763/photo/co2-emission-reduction-concept-in-hand-with-environmental-icons-global-warming-sustainable.jpg?s=612x612&w=0&k=20&c=lIcqZDo2JMr8jmHgIJ3JvM3S2mP_zpSTyIsAcs-IqIQ=" alt="Greenhouse Gas Emissions 7">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

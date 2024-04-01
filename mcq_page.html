@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1524486361537-8ad15938e1a3?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Change 'background_image.jpg' to the path of your background image */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px; /* Add margin to separate header from form */
+        }
+        h1 {
+            margin: 0; /* Remove default margin for h1 */
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        fieldset {
+            margin-bottom: 20px;
+            border: none;
+        }
+        legend {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #answers {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        #answers h2 {
+            color: #4CAF50;
+        }
+        #answers p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MCQ Page</h1>
+    </header>
+    <form id="mcq-form">
+        <fieldset>
+            <legend>Question 1: Which of the following is a greenhouse gas?</legend>
+            <label><input type="radio" name="q1" value="a"> Oxygen</label><br>
+            <label><input type="radio" name="q1" value="b"> Nitrogen</label><br>
+            <label><input type="radio" name="q1" value="c"> Carbon Dioxide</label><br>
+            <label><input type="radio" name="q1" value="d"> Helium</label>
+        </fieldset>
+        <fieldset>
+            <legend>Question 2: Which activity contributes the most to greenhouse gas emissions?</legend>
+            <label><input type="radio" name="q2" value="a"> Driving cars</label><br>
+            <label><input type="radio" name="q2" value="b"> Eating meat</label><br>
+            <label><input type="radio" name="q2" value="c"> Burning fossil fuels</label><br>
+            <label><input type="radio" name="q2" value="d"> Using plastic bags</label>
+        </fieldset>
+        <fieldset>
+            <legend>Question 3: What is the main cause of the greenhouse effect?</legend>
+            <label><input type="radio" name="q3" value="a"> Deforestation</label><br>
+            <label><input type="radio" name="q3" value="b"> Volcanic eruptions</label><br>
+            <label><input type="radio" name="q3" value="c"> Industrial pollution</label><br>
+            <label><input type="radio" name="q3" value="d"> Increased greenhouse gases</label>
+        </fieldset>
+        <fieldset>
+            <legend>Question 4: Which gas is the most abundant in Earth's atmosphere?</legend>
+            <label><input type="radio" name="q4" value="a"> Oxygen</label><br>
+            <label><input type="radio" name="q4" value="b"> Nitrogen</label><br>
+            <label><input type="radio" name="q4" value="c"> Carbon Dioxide</label><br>
+            <label><input type="radio" name="q4" value="d"> Argon</label>
+        </fieldset>
+        <fieldset>
+            <legend>Question 5: What is the primary cause of anthropogenic climate change?</legend>
+            <label><input type="radio" name="q5" value="a"> Deforestation</label><br>
+            <label><input type="radio" name="q5" value="b"> Industrial pollution</label><br>
+            <label><input type="radio" name="q5" value="c"> Greenhouse gas emissions</label><br>
+            <label><input type="radio" name="q5" value="d"> Volcanic eruptions</label>
+        </fieldset>
+        <button type="button" onclick="submitAnswers()">Submit Answers</button>
+    </form>
+    <div id="answers"></div>
+
+    <script>
+        function submitAnswers() {
+            const form = document.getElementById('mcq-form');
+            const answers = {
+                q1: form.elements['q1'].value,
+                q2: form.elements['q2'].value,
+                q3: form.elements['q3'].value,
+                q4: form.elements['q4'].value,
+                q5: form.elements['q5'].value
+            };
+
+            // Correct answers
+            const correctAnswers = {
+                q1: 'c',
+                q2: 'c',
+                q3: 'd',
+                q4: 'b',
+                q5: 'c'
+            };
+
+            // Process answers and display them
+            let answerText = '<h2>Answers:</h2>';
+            let score = 0;
+            for (let question in answers) {
+                const userAnswer = answers[question];
+                const correctAnswer = correctAnswers[question];
+                const questionNumber = question.slice(1);
+                answerText += `<p>Question ${questionNumber}: Your Answer - ${userAnswer}, Correct Answer - ${correctAnswer}</p>`;
+                if (userAnswer === correctAnswer) {
+                    score++;
+                }
+            }
+            answerText += `<p>Total Score: ${score} out of 5</p>`;
+            document.getElementById('answers').innerHTML = answerText;
+        }
+    </script>
+</body>
+</html>

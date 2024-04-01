@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('data:image/jpeg;base64,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'); /* Replace 'background_image.jpg' with the path to your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        main {
+            padding: 20px;
+            text-align: justify;
+        }
+        h2, h3 {
+            color: #4CAF50;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .article {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .article img {
+            width: 100%;
+            max-width: 100%;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .article h2 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .article p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog Page</h1>
+    </header>
+    <main>
+        <article class="article">
+            <h2>Understanding Climate Change</h2>
+            <p>Climate change is a significant and lasting change in the statistical distribution of weather patterns over periods ranging from decades to millions of years. It may be a change in average weather conditions or the distribution of events around that average (e.g., more or fewer extreme weather events).</p>
+            <p>Climate change has many potential impacts on society, including more frequent and severe natural disasters, disruptions to agriculture and food supplies, and threats to biodiversity and ecosystems. Understanding the causes and effects of climate change is crucial for developing effective strategies to mitigate its impacts and adapt to changes in the environment.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Greenhouse-effect-t2.svg" alt="Understanding Climate Change">
+        </article>
+        <article class="article">
+            <h2>The Role of Renewable Energy</h2>
+            <p>Renewable energy sources, such as solar, wind, and hydroelectric power, play a crucial role in reducing greenhouse gas emissions and combating climate change. Unlike fossil fuels, renewable energy sources produce little to no greenhouse gas emissions during operation, making them a cleaner and more sustainable option for meeting our energy needs.</p>
+            <p>Investing in renewable energy infrastructure and technology is essential for transitioning to a low-carbon economy and reducing our dependence on fossil fuels. By harnessing the power of renewable energy, we can mitigate the impacts of climate change and create a cleaner, healthier planet for future generations.</p>
+            <img src="https://media.assettype.com/advait%2F2024-01%2F2a37fc15-f8c9-4c6f-993e-c4568900452d%2FRenewable_Energy_Featured_1.jpg" alt="Renewable Energy">
+        </article>
+        <article class="article">
+            <h2>Effects of Deforestation</h2>
+            <p>Deforestation is the permanent removal of forests to make space for other uses, such as agriculture, urban development, and logging. It is a significant contributor to greenhouse gas emissions, as trees absorb carbon dioxide from the atmosphere and store it in their biomass.</p>
+            <p>Deforestation has numerous adverse effects on the environment, including loss of biodiversity, disruption of ecosystems, soil erosion, and increased greenhouse gas emissions. Protecting and restoring forests is essential for mitigating climate change and preserving the planet's ecological balance.</p>
+            <img src="https://edurev.gumlet.io/ApplicationImages/Temp/508831_ed5fb75e-1728-46ef-8c09-7a89df5c26e9_lg.png?w=400&dpr=2.6" alt="Effects of Deforestation">
+        </article>
+        <!-- Add more articles as needed -->
+    </main>
+</body>
+</html>
